@@ -38,3 +38,6 @@ Create a Repo to work
 ------------------------
 
 <img width="406" alt="Screen Shot 2023-08-01 at 1 40 54 PM" src="https://github.com/SouchenOu/build-Chat/assets/87101785/414c9b8a-a357-4428-9fdd-4ae932a59f46">
+
+
+<img width="406" alt="Screen Shot 2023-08-01 at 2 00 24 PM" src="https://github.com/SouchenOu/build-Chat/assets/87101785/8c4e6d04-9a59-4b02-a441-b45480748392">
