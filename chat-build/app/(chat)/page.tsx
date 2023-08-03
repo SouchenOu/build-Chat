@@ -1,5 +1,5 @@
 import img1 from "./images/chat-game.jpeg"
-
+import AuthForm from './componenets/AuthForm'
 export default function page()
 {
     return (
@@ -19,6 +19,7 @@ export default function page()
                 <img className="mx-auto w-auto" width="30px" height="30px" src="./images/chat-game.jpeg" alt="logo" />
                 <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign to your account</h2>
             </div>
+            <AuthForm />
         </div>
         
     )
