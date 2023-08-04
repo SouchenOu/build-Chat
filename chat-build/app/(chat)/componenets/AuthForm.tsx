@@ -6,6 +6,8 @@ By default, all components on NextJS 13 inside the App folder are server compone
 'use client';
 // we gonna make this AuthForm interactive that why we write 'use client'
 import { useCallback, useState } from "react";
+import {SubmitHandler, FieldValues, useForm} from "react-hook-form"
+import Input from '../../components/inputs/input'
 
 // now Element is an alias of LOGIN or REGISTER
 type Element = 'LOGIN' | 'REGISTER';
@@ -24,6 +26,8 @@ function AuthForm()
     const [Element, setElement] = useState<Element>('LOGIN');
     const [isLoading, setIsLoading] = useState(false);
 
+
+    // we memorize this function by using useCallback()
     const toggleElement = useCallback (() => {
         if(Element === 'LOGIN')
         {
@@ -35,9 +39,37 @@ function AuthForm()
 
     }, [Element])
     //create react hook form submit function 
+    const {register, handleSubmit, formState:{errors}} = useForm<FieldValues>({
+        defaultValues:{
+            name: '',
+            email: '',
+            password: ''
+        }
+    });
+
+    const onSubmit : SubmitHandler<FieldValues> = (data) =>
+    {
+        setIsLoading(true);
+        if(Element === 'REGISTER')
+        {
+
+        }
+        if(Element === 'LOGIN')
+        {
+
+        }
+    }
+
+    const socialAction = (action : string) => {
+        setIsLoading(true);
+    }
     return (
-        <div>
-            <h1>Auth Form!</h1>
+        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+            <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
+                <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+                        <input className="bg-black" type="text" placeholder="Tape your name"/>
+                </form>
+            </div>
         </div>
     )
 }
