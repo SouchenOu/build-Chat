@@ -1,6 +1,10 @@
 # build-Chat
 
 
+<img width="681" alt="Screen Shot 2023-08-04 at 1 45 17 PM" src="https://github.com/SouchenOu/build-Chat/assets/87101785/e50f2cb8-3ecf-4e63-8837-8bc556377df4">
+
+
+
 <img width="406" alt="Screen Shot 2023-08-01 at 2 00 24 PM" src="https://github.com/SouchenOu/build-Chat/assets/87101785/12a0e268-f9bf-4183-b6a8-492fc324b11c">
 
 <img width="406" alt="Screen Shot 2023-08-03 at 9 33 28 AM" src="https://github.com/SouchenOu/build-Chat/assets/87101785/8c59869c-2079-42c3-8de9-19255100f6ac">
