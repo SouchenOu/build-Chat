@@ -12,6 +12,7 @@ import styles from "./page.module.css"
 interface InputProps {
     label: string;
     id: string;
+    errors: FieldErrors,
     type?: string;
     required?: boolean;
     register: UseFormRegister<FieldValues>;
@@ -22,7 +23,7 @@ interface InputProps {
 /*******FC stands for function component. If we write a function that returns a React component, we can use this type. const App: React. FC = () => { return <div>Hello</div>; }; If the function does not return a React component, TypeScript will throw an error */
 
 
-const Input : React.FC<InputProps> = ({label,id,type,register,required,disabled}) => {
+const Input : React.FC<InputProps> = ({label,id,type,register,required,disabled, errors}) => {
     return (
         <div className={styles.container}>
             <label className={styles.label} htmlFor={id}>{label}</label>

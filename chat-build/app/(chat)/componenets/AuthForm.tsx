@@ -8,6 +8,8 @@ By default, all components on NextJS 13 inside the App folder are server compone
 import { useCallback, useState } from "react";
 import {SubmitHandler, FieldValues, useForm} from "react-hook-form"
 import Input from '../../components/inputs/input'
+import Button from "../../components/Button/button"
+import styles from "./page.module.css"
 
 // now Element is an alias of LOGIN or REGISTER
 type Element = 'LOGIN' | 'REGISTER';
@@ -72,9 +74,12 @@ function AuthForm()
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
             <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
                 <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
-                        <Input id="name" type="text" label="UserName" register={register}/>
-                        <Input id="email" type="email" label="Email" register={register}/>
-                        <Input id="Password" type="password" label="Password" register={register}/>
+                        <Input id="name" type="text" label="UserName" register={register} errors={errors}/>
+                        <Input id="email" type="email" label="Email" register={register} errors={errors}/>
+                        <Input id="Password" type="password" label="Password" register={register} errors={errors}/>
+                        <div className={styles.btn}>
+                            <Button />
+                        </div>
                 </form>
             </div>
         </div>
