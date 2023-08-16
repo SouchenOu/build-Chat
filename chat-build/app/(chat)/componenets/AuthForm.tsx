@@ -23,7 +23,7 @@ type Element = 'LOGIN' | 'REGISTER';
 
 function AuthForm()
 {
-    const [Element, setElement] = useState<Element>('LOGIN');
+    const [Element, setElement] = useState('LOGIN');
     const [isLoading, setIsLoading] = useState(false);
 
 
@@ -38,6 +38,8 @@ function AuthForm()
         }
 
     }, [Element])
+
+    
     //create react hook form submit function 
     const {register, handleSubmit, formState:{errors}} = useForm<FieldValues>({
         defaultValues:{

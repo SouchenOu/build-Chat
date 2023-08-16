@@ -1,5 +1,6 @@
 import img1 from "./images/chat.png"
 import AuthForm from './componenets/AuthForm'
+import styles from "./page.module.css"
 export default function page()
 {
     return (
@@ -13,7 +14,7 @@ export default function page()
                     sm:px-6
                     lg:px-8
                     bg-gray-100">
-            <div >
+            <div className={styles.title}>
                 <p>Chat Index</p>
             </div>
             <div className="sm:mx-auto sm:w-full">
