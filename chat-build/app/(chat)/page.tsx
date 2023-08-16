@@ -14,9 +14,7 @@ export default function page()
                     sm:px-6
                     lg:px-8
                     bg-gray-100">
-            <div className={styles.title}>
-                <p>Chat Index</p>
-            </div>
+           
             <div className="sm:mx-auto sm:w-full">
                 <img className="mx-auto " height={300} width={300} src="./images/chat.png" alt="logo" />
                 <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign to your account</h2>

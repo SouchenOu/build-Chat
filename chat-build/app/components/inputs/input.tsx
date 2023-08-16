@@ -25,9 +25,11 @@ interface InputProps {
 const Input : React.FC<InputProps> = ({label,id,type,register,required,disabled}) => {
     return (
         <div className={styles.container}>
-            <label htmlFor={id}>{label}</label>
-            <div className={styles.input}>
-                <input id={id} type={type} autoComplete={id} disabled={disabled} {...register(id, { required })} className={clsx(`form-input`)}></input>
+            <label className={styles.label} htmlFor={id}>{label}</label>
+            <div className={styles.inputDiv}>
+                {/* We use clxs to pass class names into the packag */}
+                {/* <input id={id} type={type} autoComplete={id} disabled={disabled} {...register(id, { required })} className={clsx(`form-input`) }></input> */}
+                <input className={styles.input} id={id} type={type} autoComplete={id} disabled={disabled} {...register(id, { required })}></input>
             </div>
         </div>
     )
