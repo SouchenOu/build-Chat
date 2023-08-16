@@ -3,23 +3,32 @@
 // to avoid multiple className
 import clsx from 'clsx'
 import {FieldErrors, FieldValues, UseFormRegister} from 'react-hook-form'
+import styles from "./page.module.css"
 
 /****In Typescript, “?” represents optional parameters. We use optional parameters when it's not mandatory for that parameter to have a value or to be specified */
+
+/****The true meaning of the optional(type? or requered?) property is that properties can be undefined or null, and we can initialize them whenever required. */
 
 interface InputProps {
     label: string;
     id: string;
     type?: string;
-    requered?: boolean;
+    required?: boolean;
     register: UseFormRegister<FieldValues>;
-    errors: FieldErrors;
     disabled?: boolean;
 
 }
-const Input = () => {
+
+/*******FC stands for function component. If we write a function that returns a React component, we can use this type. const App: React. FC = () => { return <div>Hello</div>; }; If the function does not return a React component, TypeScript will throw an error */
+
+
+const Input : React.FC<InputProps> = ({label,id,type,register,required,disabled}) => {
     return (
-        <div>
-            hello this is me
+        <div className={styles.container}>
+            <label htmlFor={id}>{label}</label>
+            <div className={styles.input}>
+                <input id={id} type={type} autoComplete={id} disabled={disabled} {...register(id, { required })} className={clsx(`form-input`)}></input>
+            </div>
         </div>
     )
 }

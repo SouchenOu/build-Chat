@@ -65,11 +65,16 @@ function AuthForm()
     const socialAction = (action : string) => {
         setIsLoading(true);
     }
+
+
+    
     return (
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
             <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
                 <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
-                        <Input/>
+                        <Input id="name" type="text" label="UserName" register={register}/>
+                        <Input id="email" type="email" label="Email" register={register}/>
+                        <Input id="Password" type="password" label="Password" register={register}/>
                 </form>
             </div>
         </div>
