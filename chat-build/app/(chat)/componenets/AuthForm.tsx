@@ -77,8 +77,8 @@ function AuthForm()
                         <Input id="name" type="text" label="UserName" register={register} errors={errors}/>
                         <Input id="email" type="email" label="Email" register={register} errors={errors}/>
                         <Input id="Password" type="password" label="Password" register={register} errors={errors}/>
-                        <div className={styles.btn}>
-                            <Button />
+                        <div >
+                            <Button>Submit</Button>
                         </div>
                 </form>
             </div>
