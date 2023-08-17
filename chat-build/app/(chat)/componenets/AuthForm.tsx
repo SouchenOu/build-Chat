@@ -11,7 +11,8 @@ import Input from '../../components/inputs/input'
 import Button from "../../components/Button/button"
 import styles from "./page.module.css"
 import AuthSocialButton from "./AuthSocialButton"
-import {BsGithub}  from "react-icons/bs"
+import {BsGithub, BsGoogle}  from "react-icons/bs"
+
 
 // now Element is an alias of LOGIN or REGISTER
 type Element = 'LOGIN' | 'REGISTER';
@@ -97,8 +98,19 @@ function AuthForm()
                             </div>
                         </div>
                         <div className="mt-6 flex gap-2">
-                                <AuthSocialButton icon={BsGithub} onClick={FunctionTest}/>
+                                <AuthSocialButton icon={BsGithub} onClick={()=> socialAction('github')}/>
+                                <AuthSocialButton icon={BsGoogle} onClick={()=> socialAction('Google')}/>
+
                         </div>
+                        <div className='flex gap-2 justify-center text-sm mt-6 px-2 text-gray-500'>
+                            <div >
+                                {Element === 'LOGIN' ? 'New to PingPong?' : 'Already have an account'}
+                            </div>
+                            <div onClick={toggleElement} className="underline cursor-pointer">
+                                {Element === 'LOGIN' ? 'Create an account' : 'Login'}
+                            </div>
+                        </div>
+                        
 
                     </div>
                 </div>

@@ -13,7 +13,7 @@ const AuthSocialButton : React.FC<AuthSocialButton> = ({icon : Icon, onClick}) =
     return (
         <div>
            <button type='button' onClick={onClick} className={styles.button}>
-            <Icon className={styles.github}/>
+            <Icon/>
             </button>
         </div>
     )
