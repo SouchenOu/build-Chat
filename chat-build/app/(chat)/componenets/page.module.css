@@ -1,3 +1,47 @@
-.btn{
+.btn {
     justify-content: center;
+}
+
+.topClass {
+    margin-top: 1.5rem;
+}
+
+.content {
+    width: 100%;
+    border-top-width: 1px;
+    border-color: gray;
+}
+
+
+/* .button {
+    border: 1px solid gray;
+    padding-top: 30px;
+    padding-left: 360px;
+    border-radius: 20px;
+
+
+}
+*/
+
+.github {
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: inline-flex;
+    border: 1px solid gray;
+    width: 100%;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: white;
+    padding-left: 360px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-top: 20px;
+    /* color: rgb(107 114 128 / var(--tw-text-opacity));
+    --tw-ring-inset: inset;
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+    outline-offset: 0px; */
 }

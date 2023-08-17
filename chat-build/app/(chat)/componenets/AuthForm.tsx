@@ -10,6 +10,8 @@ import {SubmitHandler, FieldValues, useForm} from "react-hook-form"
 import Input from '../../components/inputs/input'
 import Button from "../../components/Button/button"
 import styles from "./page.module.css"
+import AuthSocialButton from "./AuthSocialButton"
+import {BsGithub}  from "react-icons/bs"
 
 // now Element is an alias of LOGIN or REGISTER
 type Element = 'LOGIN' | 'REGISTER';
@@ -68,7 +70,10 @@ function AuthForm()
         setIsLoading(true);
     }
 
-
+    const FunctionTest = () =>
+    {
+        console.log("hello souchen");
+    }
     
     return (
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
@@ -78,9 +83,25 @@ function AuthForm()
                         <Input id="email" type="email" label="Email" register={register} errors={errors}/>
                         <Input id="Password" type="password" label="Password" register={register} errors={errors}/>
                         <div >
-                            <Button>Submit</Button>
+                            <Button type="submit" fullWidth disabled={isLoading}>{Element === 'LOGIN' ? 'Sign in' : 'Register'}</Button>
                         </div>
                 </form>
+                <div className={styles.topClass}>
+                    <div className="relative">
+                        <div className="">
+                            <div className={styles.content}>
+
+                            </div>
+                            <div className="relative flex justify-center text-sm">
+                                    <span className="bg-white px-2 text-gray-500">Or continue with</span>
+                            </div>
+                        </div>
+                        <div className="mt-6 flex gap-2">
+                                <AuthSocialButton icon={BsGithub} onClick={FunctionTest}/>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     )
