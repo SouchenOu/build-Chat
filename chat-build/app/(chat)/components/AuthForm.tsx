@@ -33,7 +33,8 @@ function AuthForm()
 
 
     // we memorize this function by using useCallback()
-    const toggleElement = useCallback (() => {
+
+    const toggleElement = () => {
         if(Element === 'LOGIN')
         {
             setElement('REGISTER');
@@ -42,7 +43,17 @@ function AuthForm()
             setElement('LOGIN');
         }
 
-    }, [Element])
+    }
+    // const toggleElement = useCallback (() => {
+    //     if(Element === 'LOGIN')
+    //     {
+    //         setElement('REGISTER');
+    //     }else
+    //     {
+    //         setElement('LOGIN');
+    //     }
+
+    // }, [Element])
 
     
     //create react hook form submit function 
@@ -80,23 +91,21 @@ function AuthForm()
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
             <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
                 <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
-                        <Input id="name" type="text" label="UserName" register={register} errors={errors}/>
-                        <Input id="email" type="email" label="Email" register={register} errors={errors}/>
-                        <Input id="Password" type="password" label="Password" register={register} errors={errors}/>
+                    {Element === 'REGISTER' && 
+                        <Input id="name" type="text" label="UserName" register={register} errors={errors} disabled={isLoading}/>}
+                        <Input id="email" type="email" label="Email" register={register} errors={errors} disabled={isLoading}/>
+                        <Input id="Password" type="password" label="Password" register={register} errors={errors} disabled={isLoading}/>
                         <div >
                             <Button type="submit" fullWidth disabled={isLoading}>{Element === 'LOGIN' ? 'Sign in' : 'Register'}</Button>
                         </div>
                 </form>
                 <div className={styles.topClass}>
                     <div className="relative">
-                        <div className="">
-                            <div className={styles.content}>
-
-                            </div>
+                    
                             <div className="relative flex justify-center text-sm">
                                     <span className="bg-white px-2 text-gray-500">Or continue with</span>
                             </div>
-                        </div>
+                   
                         <div className="mt-6 flex gap-2">
                                 <AuthSocialButton icon={BsGithub} onClick={()=> socialAction('github')}/>
                                 <AuthSocialButton icon={BsGoogle} onClick={()=> socialAction('Google')}/>

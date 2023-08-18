@@ -1,5 +1,4 @@
-import img1 from "./images/chat.png"
-import AuthForm from './componenets/AuthForm'
+import AuthForm from './components/AuthForm'
 import styles from "./page.module.css"
 export default function page()
 {
