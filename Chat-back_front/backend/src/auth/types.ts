@@ -1,4 +1,5 @@
 import {Field, ObjectType} from '@nestjs/graphql'
+import {User} from 'src/user/user.type'
 
 
 //It will convert this typescript code into a praphql schema

@@ -30,7 +30,7 @@ async function bootstrap() {
       whitelist: true,
       transform: true,
       exceptionFactory(errors){
-        /* i use reduce here to take all the elements of the array and put them into a single object and then we format it in a way 
+        /* I use reduce here to take all the elements of the array and put them into a single object and then we format it in a way 
         that we can display the errors nicely on our frontend */
           const formattedErrors = errors.reduce((accumulator, error) => {
             accumulator[error.property] = Object.values(error.constraints).join(', ',);
