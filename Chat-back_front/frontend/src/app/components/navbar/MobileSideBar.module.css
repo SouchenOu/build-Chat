@@ -1,0 +1,13 @@
+.Mobile{
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0px;
+    z-index: 40;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(48, 44, 63);
+    border-top-width: 1px;
+
+}

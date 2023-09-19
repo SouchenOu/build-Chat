@@ -1,0 +1,20 @@
+.Items{
+    display: flex;
+    column-gap: 0.80rem;
+    border-radius: 1rem;
+    padding: 3rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 800;
+    color: rgb(161, 100, 218);
+    
+
+
+
+
+}
+.Items:hover{
+    background-color: rgb(199, 186, 241);
+    
+
+}

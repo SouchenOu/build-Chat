@@ -1,0 +1,14 @@
+.Container{
+   
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 50rem;
+    padding-bottom: 50rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(64, 62, 94);
+
+
+}

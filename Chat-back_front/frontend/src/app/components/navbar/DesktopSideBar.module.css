@@ -1,0 +1,23 @@
+.container{
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 40;
+    width: 8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    overflow-y: auto;
+    background-color: rgb(48, 44, 63);
+    border-right-width: 1px;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+
+
+
+}
